@@ -9,9 +9,10 @@ import (
 func main() {
 	r := gin.Default()
 
-	cmsGroup := r.Group("/cms"){
+	cmsGroup := r.Group("/api").Use(){
 		
 	}
+
 	r.GET("/ping", func(c *gin.Context) {
 		c.String(http.StatusOK, "pong")
 	})
